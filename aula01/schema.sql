@@ -43,3 +43,43 @@ CREATE TABLE produto_venda(
     FOREIGN KEY (venda_id) REFERENCES venda(id) ON DELETE CASCADE,
     FOREIGN KEY (produto_id) REFERENCES produto(id) ON DELETE CASCADE
 );
+
+INSERT INTO usuario (
+    nome, 
+    email, 
+    senha
+)
+VALUES 
+    ('João', 'joao@email.com', 'botafogo123'),
+    ('Rassi', 'rassi@email.com', 'patospizzas'),
+    ('Lucas', 'lucas@email.com', 'dededovasco'),
+    ('Flavio', 'flavio@email.com', 'camilahamburguerps5');
+
+
+INSERT INTO cliente (nome, telefone, usuario_id) 
+VALUES
+    ('João Pedro', '99999-9999', 1),
+    ('Rassi', '88888-9999', 2),
+    ('Lucas', '77777-9999', 3),
+    ('Flavio', '66666-9999', 4);
+
+INSERT INTO produto (nome, descricao, preco)
+VALUES
+    ('Arroz 5kg', 'Fininho', 10.20),
+    ('Feijão Preto 1kg', 'Tipo 1, selecionado', 7.50),
+    ('Macarrão Espaguete 500g', 'Grano duro', 4.30),
+    ('Óleo de Soja 900ml', 'Refinado', 6.80);
+
+
+INSERT INTO venda(data, usuario_id, cliente_id) 
+VALUES
+    ('2025-08-27', 1, 1),
+    ('2025-08-26', 2, 2),
+    ('2025-08-25', 3, 3);
+
+INSERT INTO produto_venda(venda_id, produto_id, quantidade, preco_unitario)
+VALUES
+    (1, 1, 2, 10.20),
+    (1, 2, 1, 7.50),
+    (2, 3, 3, 4.30),
+    (3, 4, 1, 6.80);
