@@ -81,5 +81,5 @@ INSERT INTO produto_venda(venda_id, produto_id, quantidade, preco_unitario)
 VALUES
     (1, 1, 2, 10.20),
     (1, 2, 1, 7.50),
-    (2, 3, 3, 4.30),
+    (2, 3, 3, 4.30),    
     (3, 4, 1, 6.80);
